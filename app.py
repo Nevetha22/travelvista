@@ -38,6 +38,8 @@ class ItineraryHandler(tornado.web.RequestHandler):
 
         itinerary = generate_itinerary(destination, trip_type, days, budget)
         self.render("itinerary.html", itinerary=itinerary)
+    def head(self):
+        self.set_status(200)
 
 def make_app():
     return tornado.web.Application([
