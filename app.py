@@ -26,6 +26,9 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html")
 
+    def head(self):
+        self.set_status(200)
+
 class ItineraryHandler(tornado.web.RequestHandler):
     def post(self):
         destination = self.get_body_argument("destination")
