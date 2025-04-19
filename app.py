@@ -45,7 +45,9 @@ def make_app():
     debug=True)
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8888))  # Use Render's PORT
     app = make_app()
-    app.listen(8888)
-    print("Server running at http://localhost:8888")
+    app.listen(port)
+    print(f"Running on http://localhost:{port}")
     tornado.ioloop.IOLoop.current().start()
+
