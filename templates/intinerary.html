@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Itinerary</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #88d3ce, #6e45e2);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 40px;
+        }
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your AI-Powered Travel Itinerary ✨</h1>
+    <div class="box">
+        {{ itinerary }}
+    </div>
+</body>
+</html>
